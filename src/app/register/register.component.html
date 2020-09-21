@@ -1,0 +1,70 @@
+<div class="parent">
+
+    <div class="regform">
+        <h1>
+            Registration Form</h1>
+    </div>
+    <div class="main">
+
+        <form (ngSubmit)="register()" ngNativeValidate>
+            <div id="name">
+                <h2 class="name">
+                    Name </h2>
+                <input class="firstname" type="text" name="first_name" placeholder="Enter first name"
+                    (keypress)='isAName($event)' [(ngModel)]=customer.customerFirstName required><br>
+                <label class="firstlabel">first name</label>
+                <input class="lastname" type="text" name="last_name" placeholder="Enter last name"
+                    (keypress)='isAName($event)' [(ngModel)]=customer.customerLastName required><br>
+                <label class="lastlabel">last name</label>
+            </div>
+            <h2 class="name">
+                Email </h2>
+            <input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <h2 class="name">
+                Date of Birth</h2>
+            <input class="email" type="date" name="dob" [(ngModel)]=customer.customerdateOfBirth required>
+            <h2 class="name">
+                Contact</h2>
+            <input class="Code" type="text" name="area_code" placeholder="Enter city" [(ngModel)]=customer.customerCity
+                required>
+            <label class="area-code"> City</label>
+            <input class="number" type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx"
+                (keypress)='isNumber($event,"phone",10)' minlength="10" maxlength="10"
+                [(ngModel)]="customer.customerMobileNumber" required>>
+            <label class="phone-number">Contact Number</label>
+
+
+
+            <h2 class="name">
+                Employment Type</h2>
+            <select class="option" name="subject" [(ngModel)]=customer.customerEmploymentType required>
+
+                <option disabled="disabled" selected="selected">--Choose option--</option>
+                <option>Salaried</option>
+                <option>Self Employed</option>
+
+            </select>
+            <h2 class="name">
+                Password </h2>
+            <input class="company" type="password" name="psw" placeholder="Enter password"
+                [(ngModel)]=customer.customerPassword pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+            <h2 class="name">
+                Confirm password </h2>
+            <input class="company" type="password" name="conpsw" placeholder="Confirm password"
+                [(ngModel)]='confirmPass' required>
+            <span *ngIf='passwordFlag' style="color: red; font-weight: bold;">Oops!! Password mismatch</span>
+
+            <button type="submit">Register</button>
+
+            <h4 style="text-align: center; color: gold;">{{message}}</h4>
+
+        </form>
+        <div class="existing">
+            <h4>Already a user ?</h4>
+
+            <a routerLink='/loginLink' style="text-align: center;">Login here</a>
+        </div>
+    </div>
+</div>
