@@ -44,3 +44,13 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/assets/Idea.gif
+src/services/admin-login.service.ts
+src/model/CustomerLogin.ts
+src/model/ForgotPassword.ts
+src/services/admin-login.service.ts
+src/assets/admin.gif
+src/assets/admin.jpg
+src/assets/admin.png
+package.json
+package-lock.json
