@@ -1,0 +1,58 @@
+<div class="sidebar">
+  <a routerLink='/updateDetails'>Update Details</a>
+  <a routerLink='/viewAllUser'>View All Users</a>
+  <a href="#">View All Loan Details</a>
+  <a routerLink='/viewAllApplications'>View All Pending Applications</a>
+  <a routerLink='/manageLoanStatus'>Manage Loan Application</a>
+  <a href="#">Download Documents</a>
+</div>
+<div class="content">
+  <form class="searchForm" (ngSubmit)='searchApplication()' *ngIf="flag" >
+    <label>Enter Application ID</label>
+    <input type="text"><br>
+    <button type="submit"  onclick="document.getElementsByClassName(content).style.height='1500px'" class="searchButton">Submit</button>
+  </form>
+  <form class="form" *ngIf="!flag">
+    Application ID:
+    <input class="applicationId" type="text" name="application_Id" readonly><br>
+    Customer ID:
+    <input class="customerId" type="text" name="customer_Id" readonly><br>
+    Gender:
+    <input class="gender" type="text" name="gender" readonly><br>
+    Address:
+    <input class="address" type="text" name="address" readonly><br>
+    PAN Number:
+    <input class="pan" type="text" name="pan" readonly><br>
+    AadharNumber:
+    <input class="aadhar" type="text" name="aadhar" readonly><br>
+    Nationality:
+    <input class="nationality" type="text" name="nationality" readonly><br>
+    Retirement Age:
+    <input class="retirementAge" type="text" name="retirementAge" readonly><br>
+    Organization:
+    <input class="organization" type="text" name="organization" readonly><br>
+    Income:
+    <input class="income" type="text" name="income" readonly><br>
+    Loan Amount:
+    <input class="loanAmount" type="text" name="loanAmount" readonly><br>
+    Tenure:
+    <input class="tenure" type="text" name="tenure" readonly><br>
+    Down Payment:
+    <input class="downPayment" type="text" name="downPayment" readonly><br>
+    Maritial Status:
+    <input class="maritialStatus" type="text" name="maritialStatus" readonly><br>
+    Number Of Dependents:
+    <input class="numOfDep" type="text" name="numOfDep" readonly><br>
+    Dependent Monthly Expenses:
+    <input class="depMonthlyExpenses" type="text" name="depMonthlyExpenses" readonly><br>
+    Personal Expenses:
+    <input class="personalExpenses" type="text" name="personalExpenses" readonly><br>
+    Existing Loan:
+    <input class="existingLoan" type="text" name="existingLoan" readonly><br>
+    Max Loan Amount:
+    <input class="maxLoanAmount" type="text" name="maxLoanAmount" readonly><br>
+    Status:
+    <input class="maxLoanAmount" type="text" name="maxLoanAmount" readonly><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
