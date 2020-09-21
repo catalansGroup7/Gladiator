@@ -1,0 +1,41 @@
+<div class ="main">
+<div class = "container">
+<img class ="loginImg" src = "assets/LoginImage.jpg" alt="Login Page Image">
+<div class="centered">Let's together make your <div></div>dream a reality....</div>
+</div>
+
+<form (ngSubmit) ='loginUser()' ngNativeValidate>
+
+<div class ="loginBox" >
+    <h2 style= "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" class="header">
+        Login
+    </h2>
+    <div class = "login">
+    
+    <input type="text" name='nm' id ='userid'placeholder="Enter UserID" [(ngModel)] = login.customerId (keypress)='isNumber($event,"userid",10)' required>
+</div>  
+<div class = "login">
+    
+    <input type="password" name='psw' placeholder="Enter Password" [(ngModel)] = login.customerPassword required>
+</div>
+<br>
+<div>
+    <button class="btn" type="submit" >Login</button>
+</div>
+<br>
+<div>
+    <a routerLink='/forgotPasswordLink'>Forgot Password ?  </a> <span>|</span>  
+    <span><a routerLink= "/registerLink">  New User ?</a></span>
+
+</div>
+<h4 style="color: red;">{{message}}</h4>
+
+</div>
+
+
+</form>
+
+</div>
+
+
+
