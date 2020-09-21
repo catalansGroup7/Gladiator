@@ -1,0 +1,93 @@
+.main{
+  background: url("src\assets\AppForm.jpeg");
+  background-size:cover ;
+  
+  height: 2700px;
+  
+}
+
+
+.container{
+  
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%;
+  /* background: rgba(0, 0, 0, 0.4); */
+  padding: 20px;
+  border-radius:20px ;
+  box-shadow:0 0 10px 2px black;
+  
+  height: 460px;
+}
+.container1{
+  
+  position: absolute;
+  top: 235%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  /* background: rgba(0, 0, 0, 0.4); */
+  padding: 20px;
+  border-radius:20px ;
+  box-shadow:0 0 10px 2px black;
+  
+  height: 1160px;
+}
+.container2{
+  
+  position: absolute;
+  top: 440%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  /* background: rgba(0, 0, 0, 0.4); */
+  padding: 20px;
+  border-radius:20px ;
+  box-shadow:0 0 10px 2px black;
+  
+  height: 700px;
+}
+
+
+
+.heading{
+  margin: 10px;
+  font-size: 15px;
+  color: teal;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+.reg-form{
+  text-align: center;
+}
+fieldset{
+  
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 10px;
+}
+.field-name{
+  color: teal;
+  font-size: 20px;
+}
+input, .gender-options{
+  width: 90%;
+  padding: 10px;
+  border: none;
+}
+input:focus, .gender-options:focus{
+  outline:none ;
+}
+button{
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 10px;
+  margin: 10px;
+}
+button:hover{
+  background: rgb(36, 36, 114);
+}

@@ -1,0 +1,198 @@
+<div class = "main">
+    <h1 style="color: teal;text-align: center; font-weight: bold;">Loan Application form</h1>
+<div class="container">
+    <form class="reg-form" (ngSubmit)="applyLoan()" ngNativeValidate>
+        <fieldset>
+            
+            <legend>
+                <div class="heading">
+                    Basic Info
+                </div>
+            </legend>
+           
+            <fieldset>
+                <legend>
+                    <div class="field-name">Customer Id</div>
+                </legend>
+                <input type="number" name ="id" placeholder="Customer Id"  value ={{id}} readonly>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Gender</div>
+                </legend>
+                <select class="gender-options" name ="gen" [(ngModel)]="application.gender" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Address</div>
+                </legend>
+                <input type="text" name ="add" placeholder="Enter Address" [(ngModel)]='application.address' required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Nationality</div>
+                </legend>
+                <input type="text" placeholder="Enter nationality" name ="nation" [(ngModel)]='application.nationality' required>
+            </fieldset>
+        </fieldset>
+    
+
+   
+<div class = "container1">
+    <fieldset>
+            <legend>
+                <div class="heading">
+                    Loan Eligibility
+                </div>
+            </legend>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Retirement Age</div>
+                </legend>
+                <input type="number" placeholder="Enter retirement age" name ="age" [(ngModel)]="application.retirementAge" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Monthly Income</div>
+                </legend>
+                <input type="number" placeholder="Enter monthly income"name ="income" [(ngModel)]="application.income" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Loan Amount</div>
+                </legend>
+                <input type="number" placeholder="Enter loan amount" name ="loan" [(ngModel)]="application.loanAmount" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Tenure</div>
+                </legend>
+                <input type="number" placeholder="Enter tenure" name ="tenure" [(ngModel)]="application.tenure" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Down Payment</div>
+                </legend>
+                <input type="number" placeholder="Enter Down Payment" name ="dp" [(ngModel)]="application.downPayment" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Personal Expenses</div>
+                </legend>
+                <input type="number" name = "pe" placeholder="Enter Personal Expenses" [(ngModel)]="application.personlExpenses" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Marital Status</div>
+                </legend>
+                <select class="gender-options" name ="ms" [(ngModel)]="application.maritialStatus" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>Married</option>
+                    <option>Unmarried</option>
+                    
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Number of Dependents</div>
+                </legend>
+                <input type="number" placeholder="Number of dependents" name ="noofdep" [(ngModel)]="application.noOfDependents" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Expenses of Dependents</div>
+                </legend>
+                <input type="number" placeholder="Enter Dependents expenses" name ="dep" [(ngModel)]="application.depandentMonthlyExpenses" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Any existing Loan?</div>
+                </legend>
+                <select class="gender-options" name ="el" [(ngModel)]="application.existingLoan" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                    
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Existing loan EMI(if any)</div>
+                </legend>
+                <input type="number" placeholder="Enter 0 if no pre existing loan" name ="loanemi" [(ngModel)]="application.emiExistingLoan" required>
+            </fieldset>
+           
+           
+        </fieldset>
+    
+    </div>
+
+    
+       
+<div class = "container2">
+        <fieldset>
+            <legend>
+                <div class="heading">
+                    Documents
+                </div>
+            </legend>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Aadhar Card</div>
+                </legend>
+                <input type="text" name ="aadhar" placeholder="Enter Aadhar Number"id="userAadhar"
+                (keypress)='isNumber($event,"userAadhar",12)'  value="" minlength="12" maxlength="12"
+                [(ngModel)]="application.aadharNumber" required>
+            <!-- <span class=" error">Oops!! Invalid Aadhar Number</span>> -->
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Pan Card</div>
+                </legend>
+                <input type="text" name ="pan" placeholder="Enter PAN number" [(ngModel)]="application.userPAN" minlength="10" maxlength="10" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Property Type</div>
+                </legend>
+                <select class="gender-options" name ="pt" [(ngModel)]="application.propertyType" required>
+                    <option selected disabled hidden>--Choose An Option--</option>
+                    <option>Land purchase</option>
+                    <option>Home purchase</option>
+                    <option>Construction purchase</option>
+                    <option>Home Improvement</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Property Location</div>
+                </legend>
+                <input type="text" name ="prl" placeholder="Enter property location" [(ngModel)]="application.propertyLocation" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <div class="field-name">Property Cost</div>
+                </legend>
+                <input type="number" name ="pc" placeholder="Enter property cost" [(ngModel)]="application.propertyCost" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>
+                    <div class="field-name">Organization Name</div>
+                </legend>
+                <input type="text" name ="on" placeholder="Enter organisation details" [(ngModel)]="application.organisation" required>
+                </fieldset>
+           
+                <button type="submit">Submit</button>
+            </fieldset>
+        </div>
+        
+    </form>
+</div>
+
+</div>
