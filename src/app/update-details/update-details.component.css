@@ -1,0 +1,61 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position:absolute;
+  height: 590px;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 590px;
+  vertical-align: top;
+  background-size: 1250px 600px;
+  opacity: 0.8;
+}
+.profilecard{
+  width: 400px;
+  height:500px;
+  margin:auto;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+}
+/* .content{
+  padding: 20px;
+  float: left;
+}
+.content p{
+  color: #4b4fe2;
+  margin-right: 16px;
+} */
+.content1{
+  padding: 20px;
+}
+.content p{
+ 
+  margin-right: 16px;
+}
+.lab{
+  color: black;
+  float: left;
+}

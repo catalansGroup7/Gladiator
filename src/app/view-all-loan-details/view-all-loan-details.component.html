@@ -1,0 +1,25 @@
+<div class="content">
+    <h1 style="text-align: center;">All Loans Sanctioned Till Date</h1>
+        <table class="tableApplication" align="center">
+            <tr>
+                <th>Loan Account ID</th>
+                <th>Customer ID</th>
+                <th>Interest Rate</th>
+                <th>Tenure</th>
+                <th>Loan Amount</th>
+                <th>EMI Start Date</th>
+                <th>EMI End Date</th>
+                <th>EMI Amount</th>
+            </tr>
+            <tr *ngFor='let l of allLoan'>
+                <td>{{l.loanId}}</td>
+                <td>{{l.customerId}}</td>
+                <td>{{l.interestRate}}</td>
+                <td>{{l.tenure}}</td>
+                <td>{{l.loanAmount}}</td>
+                <td>{{l.emiStartDate}}</td>
+                <td>{{l.emiEndDate}}</td>
+                <td>{{l.emiAmount}}</td>
+            </tr>
+        </table>
+</div>
