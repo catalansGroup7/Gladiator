@@ -1,0 +1,80 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position:absolute;
+  height: 700px;
+  overflow: auto;
+
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+
+.sidebar a.active {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 700px;
+  vertical-align: top;
+  background-size: 1250px 600px;
+  opacity: 0.8;
+  overflow: auto;
+}
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.card{
+  width: 1000px;
+  margin:auto;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.con{
+  width: 1000px;
+  margin-left:120px;
+}
+#clock{
+  display: none;
+  margin: 2px;
+  padding: 3px;
+  box-sizing: border-box;
+}
+button{
+  color:black;
+  margin: auto;
+  padding: 2px 2px;
+  width: 300px;
+}
+button:focus::before{
+  outline: none;
+}
+button:focus+ div#clock{
+  display: block;
+}
+button:focus::after{
+  outline: none;
+}

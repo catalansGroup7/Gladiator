@@ -1,0 +1,41 @@
+<div class="sidebar">
+    <a routerLink='/updateDetails'>View Profile</a>
+    <a routerLink='/viewAllUser'>View All Users</a>
+    <a routerLink="/viewAllLoan">View All Loan Details</a>
+    <a routerLink='/viewAllApplications'>View All Pending Applications</a>
+  </div>
+<div class="content">
+    <div class="con">
+        <h1 style="text-align: center;"> All Customers <img src="./assets/viewUser.jfif" style="width: 10%; height: 10%; padding: 1px 160px; "> </h1>
+        <br /> <br />
+    </div>
+    <div *ngFor="let c of allCustomers">
+        <div class="card">
+            <div> <button>{{c.customerId}}
+                    &nbsp;&nbsp;&nbsp;{{c.customerFirstName}}</button>
+                <div id="clock">
+                    <table style="border: black;width: 840px;height: 100px; box-sizing: border-box;table-layout: auto;">
+                        <tr style="margin-left: 6px;">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Date Of Birth</th>
+                            <th>City</th>
+                            <th>Contact</th>
+                            <th>Employment Type</th>
+                        </tr>
+                        <tr style="margin-left: 6px;">
+                            <td> {{c.customerFirstName }}</td>
+                            <td> {{c.customerLastName }}</td>
+                            <td> {{c.customerEmail}}</td>
+                            <td> {{c.customerdateOfBirth }}</td>
+                            <td> {{c.customerCity}}</td>
+                            <td> {{c.customerMobileNumber}}</td>
+                            <td> {{c.customerEmploymentType}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
