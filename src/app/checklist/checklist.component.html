@@ -1,0 +1,35 @@
+<div class="sidebar">
+    <h4 style="text-align: center; color: white;"><i class="fa fa-user-circle"></i>{{customerName}} {{customerSurname}}</h4>  
+
+        
+    <a routerLink='/viewUserLink'><i class="fa fa-fw fa-user"></i><span>Myprofile</span></a>
+    <a routerLink='/updateUserProfile'><i class="fa fa-id-card"></i><span>Update profile</span></a>
+   
+    <a routerLink='/loanapplicationlink'><i class="fa fa-bank"></i><span>Apply Loan</span></a>
+    <a routerLink="/trackApplication"><i class="fa fa-check"></i><span>Application status</span></a>
+    <a routerLink="/viewLoanDetails"><i class="fa fa-inr"></i><span>EMI Details(If any)</span></a>
+    <a routerLink="/checklistLink"><i class="fa fa-cog"></i><span>Generate Checklist</span></a> 
+</div>
+<div class = "background">
+    <div class="search" align="center" style="padding-top: 50px;">
+    <input type="number" placeholder="Enter Application ID" [(ngModel)]='applicationId'>
+    <button type="submit" (click)='submit()'>Submit</button>
+    </div>
+    <h2 style="text-align: center; color: red;">{{message}}</h2>
+    <div class="profilecard" *ngIf='showFlag'>
+        <div class="cimage">
+        <img  src="assets/userProfilePic.png" style="width: 15%; height :20%;display: block;margin-left: auto;margin-right: auto;padding-top: 10px;">
+        </div>
+        
+        <div class="content">   <!--*ngFor='let l of loanDetails' --> 
+            <p><b class="lab">Customer ID :</b><b class="val pull-right">{{statusResult.customerId}}</b></p><br>
+            <p><b class="lab">Application ID:</b><b class="val pull-right">{{statusResult.applicationId}}</b></p><br>
+            <p><b class="lab">Aadhar :</b><b class="val pull-right">{{statusResult.aadharCard}}</b></p><br>
+            <p><b class="lab">PAN :</b><b class="val pull-right">{{statusResult.panCard}}</b></p><br>
+            <p><b class="lab">LOA :</b><b class="val pull-right">{{statusResult.letterOfAgreement}}</b></p><br>
+            <p><b class="lab">NOC :</b><b class="val pull-right">{{statusResult.noObjectionCerti}}</b></p><br>
+            <p><b class="lab">Salary Slip :</b><b class="val pull-right">{{statusResult.salarySlip}}</b></p><br>
+            <p><b class="lab">Sales Agreement :</b><b class="val pull-right">{{statusResult.saleAgreement}}</b></p><br>
+            <!-- <p><b class="lab">Tenure :</b><b class="val pull-right">{{ l.tenure}}</b></p><br> -->
+        </div>
+    </div>
