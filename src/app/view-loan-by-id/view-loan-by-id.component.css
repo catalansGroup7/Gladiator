@@ -1,0 +1,98 @@
+
+
+.background{
+  margin-left: 250px;
+   background-image: url("src\assets\custDash3.jpg"); 
+  background-size: cover;
+  height: 1005px;
+}
+
+
+.profilecard{
+  width: 450px;
+  margin-left: 150px;
+  position: relative;
+  top:15%;
+  left: 14%;
+  height: 400px;
+  background:white;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  
+  
+}
+/* .content{
+  padding: 20px;
+  float: left;
+}
+.content p{
+  color: #4b4fe2;
+  margin-right: 16px;
+} */
+.content{
+  padding: 20px;
+}
+.content p{
+ 
+  margin-right: 16px;
+}
+.lab{
+  color: black;
+  float: left;
+}
+.val{
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:  tomato;
+  
+}
+@media only screen{
+  .sidebar {
+    margin-top: 0%;
+    background: #22242A;
+    padding-top: 0px;
+    position: absolute;
+    left: 0;
+    width: 250px;
+    /* height: inherit; */
+    height: 1005px;
+    transition: 0.5s;
+    transition-property: left;
+  }
+}
+
+.sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover{
+  background: #b3b7c0;
+}
+
+.sidebar i{
+  padding-right: 10px;
+}
+
+label #sidebar_btn{
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover{
+  color: #19B3D3;
+}
