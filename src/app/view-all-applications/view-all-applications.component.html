@@ -1,0 +1,34 @@
+<div class="content">
+    <h1 style="text-align: center;">All Pending Applications</h1>
+    <p style="text-align: center;">*See Documents in Loan Documents folder with application id mentioned against it*</p>
+        <table class="tableApplication" align="center">
+            <tr>
+                <th>Application ID</th>
+                <th>Retirement Age</th>
+                <th>Income</th>
+                <th>Loan Amount</th>
+                <th>Tenure</th>
+                <th>Down Payment</th>
+                <th>Max Loan Amount User Can Avail</th>
+                <th>EMI of Existing Loan</th>
+                <th>Appointment Date</th>
+                <th>Status</th>
+                <th>Approve</th>
+                <th>Reject</th>
+            </tr>
+            <tr *ngFor='let a of allApplications'>
+                <td>{{a.applicationId}}</td>
+                <td>{{a.retirementAge}}</td>
+                <td>{{a.income}}</td>
+                <td>{{a.loanAmount}}</td>
+                <td>{{a.tenure}}</td>
+                <td>{{a.downPayment}}</td>
+                <td>{{a.maxLoanAmount}}</td>
+                <td>{{a.emiExistingLoan}}</td>
+                <td>{{a.appointmentDate}}</td>
+                <td>{{a.loanStatus}}</td>
+                <td><button (click)='validateCustomer(a.applicationId)'>Approve</button></td>
+                <td><button (click)='rejectCustomer(a.applicationId)'>Reject</button></td>
+            </tr>
+        </table>
+</div>
