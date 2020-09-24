@@ -1,0 +1,74 @@
+<div class="sidebar">
+    <h4 style="text-align: center; color: white;"><i class="fa fa-user-circle"></i>{{customerName}} {{customerSurname}}</h4>
+
+    <a routerLink='/viewUserLink'><i class="fa fa-fw fa-user"></i><span>Myprofile</span></a>
+      <a routerLink='/updateUserProfile'><i class="fa fa-id-card"></i><span>Update profile</span></a>
+     
+      <a routerLink='/loanapplicationlink'><i class="fa fa-bank"></i><span>Apply Loan</span></a>
+      <a routerLink="/trackApplication"><i class="fa fa-check"></i><span>Application status</span></a>
+      <a routerLink="/viewLoanDetails"><i class="fa fa-inr"></i><span>EMI Details(If any)</span></a>
+      <a routerLink="/checklistLink"><i class="fa fa-cog"></i><span>Generate Checklist</span></a> 
+</div>
+
+<div class="content">
+    <form (ngSubmit)="update()" ngNativeValidate>
+
+
+        <h2 class="name"> Customer ID</h2>
+        <input class="custid" type="text" name="custid" [(ngModel)]=customer.customerId value={{id}}
+            readonly><br>
+
+        
+            <h2 class="name">
+                Name </h2>
+            <input class="firstname" type="text" name="first_name" placeholder="Enter first name"
+                [(ngModel)]=customer.customerFirstName value={{customerName}} readonly><br>
+            <input class="lastname" type="text" name="last_name" placeholder="Enter last name"
+                [(ngModel)]=customer.customerLastName value={{customerSurname}} readonly>
+        
+        <h2 class="name">
+            Email </h2>
+        <input class="company" type="email" name="eml" placeholder="Enter email" [(ngModel)]=customer.customerEmail
+            value={{email}} readonly><br>
+        <h2 class="name">
+            Date of Birth</h2>
+        <input class="dob" type="date" name="dob" [(ngModel)]=customer.customerdateOfBirth
+            value={{dob}} required><br>
+        <h2 class="name">
+            Contact</h2>
+        <input class="city" type="text" name="area_code" placeholder="Enter city" [(ngModel)]=customer.customerCity
+            value={{city}} required>
+        <label class="city-label"> City</label>
+        <input class="number" type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx"
+            (keypress)='isNumber($event,"phone",10)' minlength="10" maxlength="10"
+            [(ngModel)]="customer.customerMobileNumber" value={{contact}} required>
+        <label class="phone-number">Contact Number</label>
+        <br>
+
+
+        <h2 class="name">
+            Employment Type</h2>
+        <select class="option" name="subject" [(ngModel)]=customer.customerEmploymentType
+            value={{emptype}} required>
+
+            <option disabled="disabled" selected="selected">--Choose option--</option>
+            <option>Salaried</option>
+            <option>Self Employed</option>
+
+        </select>
+
+        <br>
+        <h2 class="name">
+            Password </h2>
+        <input class="psw" type="password" name="psw" placeholder="Enter password" [(ngModel)]=customer.customerPassword value ={{pass}}
+            readonly>
+            <h2 class="name">
+                Confirm password </h2>
+            <input class="confirm" type="password" name="conpsw" placeholder="Confirm password"
+                [(ngModel)]='confirmPass' required>
+            <span *ngIf='passFlag' style="color: red; font-weight: bold;">Oops!! Password mismatch</span>
+
+        <button class="btn" type="submit">Update Info</button>
+
+    </form>
+</div>
