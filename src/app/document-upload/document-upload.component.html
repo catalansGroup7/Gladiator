@@ -1,0 +1,47 @@
+<ul style="list-style-type:square;">
+    <li><h3 style="text-align: center; color: darkcyan;">Your loan application is in progress. Your application id is
+       <b> {{applicationId}} </b>. Please note down your Application ID for future references. This doesn't confirm your Loan Request. Your Loan Approval will be based on your Documents.</h3></li>
+    <li><h4 style="text-align: center; color: darkcyan;">Kindly upload your documents for further verification in <b> [fileName]_[yourApplicationId] </b> name format. Upload all documents and check status in Generate Checklist on your Dashboard.</h4></li>
+</ul>
+
+
+<div class="card">
+    <h1 style="text-align: center;">Upload Documents</h1>
+
+    <form (ngSubmit)="uploadAadharCard()" enctype="multipart/form-data">
+        <h4 class="name">Aadhar Card : </h4> <input type="file" class="aadhar" name="t1"
+            (change)="onFileChange($event)" /> <br />
+        <button class="btn1" type="submit">Upload</button>
+    </form>
+
+    <form (ngSubmit)="uploadPanCard()" enctype="multipart/form-data">
+        <h4 class="name">PAN Card : </h4> <input type="file" name="t1" class="pan" (change)="onFileChange($event)" />
+        <br />
+        <button class="btn2" type="submit">Upload</button>
+    </form>
+
+    <form (ngSubmit)="uploadSalarySlip()" enctype="multipart/form-data">
+        <h4 class="name">Salary slip : </h4> <input type="file" name="t1" class="salary"
+            (change)="onFileChange($event)" /> <br />
+        <button class="btn3" type="submit">Upload</button>
+    </form>
+
+
+    <form (ngSubmit)="uploadLetterOfAgreement()" enctype="multipart/form-data">
+        <h4 class="name">Letter of Agreement : </h4> <input type="file" name="t1" class="loa"
+            (change)="onFileChange($event)" /> <br />
+        <button class="btn4" type="submit">Upload</button>
+    </form>
+
+    <form (ngSubmit)="uploadNOC()" enctype="multipart/form-data">
+        <h4 class="name">No Objection Certificate: </h4> <input type="file" name="t1" class="noc"
+            (change)="onFileChange($event)" /> <br />
+        <button class="btn5" type="submit">Upload</button>
+    </form>
+    <form (ngSubmit)="uploadSaleAgreement()" enctype="multipart/form-data">
+        <h4 class="name">Sales Agreement : </h4> <input type="file" name="t1" class="sa"
+            (change)="onFileChange($event)" /> <br />
+        <button class="btn6" type="submit">Upload</button>
+    </form>
+    <button type="submit" class="backDashboard" (click)="redirect()">Back to Dashboard</button>
+</div>
